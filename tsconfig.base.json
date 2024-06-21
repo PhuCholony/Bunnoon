@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@Bunnoon/service-api-anime": ["libs/services/api/anime/src/index.ts"],
       "@Bunnoon/service-api-genre": ["libs/services/api/genre/src/index.ts"],
       "@Bunnoon/shared-api-interfaces": [
         "libs/shared/api-interfaces/src/index.ts"
