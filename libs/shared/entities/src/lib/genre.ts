@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+
+import { AnimeEntity } from './anime';
 
 @Entity({ name: 'genres' })
 export class GenreEntity {
@@ -13,4 +15,7 @@ export class GenreEntity {
 
   @Column({ length: 34 })
   thName!: string;
+
+  @OneToMany(() => AnimeEntity, (relation) => relation.genre)
+  animes!: AnimeEntity | number;
 }

@@ -1,4 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+
+import { GenreEntity } from './genre';
 
 @Entity({ name: 'animes' })
 export class AnimeEntity {
@@ -13,4 +21,11 @@ export class AnimeEntity {
 
   @Column({ length: 50 })
   thName!: string;
+
+  @ManyToOne(() => GenreEntity, (relation) => relation.animes, {
+    onDelete: 'CASCADE',
+    onUpdate: 'NO ACTION',
+  })
+  @JoinColumn({ name: 'genre_id' })
+  genre!: GenreEntity | number;
 }
