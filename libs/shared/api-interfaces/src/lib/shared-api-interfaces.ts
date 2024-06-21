@@ -1,3 +1,7 @@
-export function sharedApiInterfaces(): string {
-  return 'shared-api-interfaces';
+export interface GenreResponse {
+  pk: string;
+  name: {
+    en: string;
+    th: string;
+  };
 }
