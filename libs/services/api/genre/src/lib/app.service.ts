@@ -14,4 +14,8 @@ export class GenreService {
   async findAll() {
     return this.genreRepository.find();
   }
+
+  async findOneByPK(pk: string) {
+    return this.genreRepository.findOne({ where: { pk } });
+  }
 }
