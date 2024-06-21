@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { GenreModule } from '@Bunnoon/service-api-genre';
+
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -16,6 +18,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       }),
       inject: [ConfigService],
     }),
+
+    GenreModule,
   ],
 })
 export class AppModule {}
