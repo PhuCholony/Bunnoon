@@ -10,4 +10,8 @@ export class GenreService {
     @InjectRepository(GenreEntity)
     private readonly genreRepository: Repository<GenreEntity>
   ) {}
+
+  async findAll() {
+    return this.genreRepository.find();
+  }
 }
