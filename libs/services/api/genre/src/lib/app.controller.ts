@@ -19,4 +19,13 @@ export class GenreController {
     }
     return genre;
   }
+
+  @Get(':pk/animes')
+  async fetchAnime(@Param('pk') pk: string) {
+    const genre = await this.genreService.findAnimeByGenrePK(pk);
+    if (!genre) {
+      throw new NotFoundException('Genre does not exist.');
+    }
+    return genre;
+  }
 }

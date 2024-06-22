@@ -18,4 +18,11 @@ export class GenreService {
   async findOneByPK(pk: string) {
     return this.genreRepository.findOne({ where: { pk } });
   }
+
+  async findAnimeByGenrePK(pk: string) {
+    return this.genreRepository.findOne({
+      where: { pk },
+      relations: ['animes'],
+    });
+  }
 }
