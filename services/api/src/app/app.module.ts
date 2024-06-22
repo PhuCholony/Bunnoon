@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { AnimeModule } from '@Bunnoon/service-api-anime';
 import { GenreModule } from '@Bunnoon/service-api-genre';
 
 @Module({
@@ -19,6 +20,7 @@ import { GenreModule } from '@Bunnoon/service-api-genre';
       inject: [ConfigService],
     }),
 
+    AnimeModule,
     GenreModule,
   ],
 })

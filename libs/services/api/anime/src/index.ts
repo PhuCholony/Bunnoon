@@ -1,3 +1,3 @@
-export * from './lib/service-api-anime.controller';
-export * from './lib/service-api-anime.service';
-export * from './lib/service-api-anime.module';
+export * from './lib/app.controller';
+export * from './lib/app.service';
+export * from './lib/app.module';

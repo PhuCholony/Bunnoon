@@ -11,4 +11,4 @@ import { AnimeService } from './app.service';
   controllers: [AnimeController],
   providers: [AnimeService],
 })
-export class ServiceApiAnimeModule {}
+export class AnimeModule {}
