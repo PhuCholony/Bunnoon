@@ -20,7 +20,10 @@
       "@Bunnoon/shared-api-interfaces": [
         "libs/shared/api-interfaces/src/index.ts"
       ],
-      "@Bunnoon/shared-entities": ["libs/shared/entities/src/index.ts"]
+      "@Bunnoon/shared-entities": ["libs/shared/entities/src/index.ts"],
+      "@Bunnoon/website-list-genre": [
+        "libs/website/modules/list-genre/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

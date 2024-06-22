@@ -77,6 +77,9 @@
         "style": "css",
         "linter": "eslint"
       }
+    },
+    "@nx/react": {
+      "library": {}
     }
   },
   "nxCloudAccessToken": "NTBkNjA2YWUtZGRiNi00OGZjLWFkMjUtMjkzZGYyYWI0YzkxfHJlYWQtd3JpdGU="
